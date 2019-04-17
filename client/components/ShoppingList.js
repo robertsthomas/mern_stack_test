@@ -6,13 +6,14 @@ import { getItems, deleteItem } from '../actions/itemActions'
 import PropTypes from 'prop-types'
 
 class ShoppingList extends Component {
-	static propTypes = {
-		getItems: PropTypes.func.isRequired,
-		item: PropTypes.object.isRequired
-	}
+	// static propTypes = {
+	// 	getItems: PropTypes.func.isRequired,
+	// 	item: PropTypes.object.isRequired
+	// }
 
 	componentDidMount() {
 		this.props.getItems()
+		console.log(this.props.getItems())
 	}
 
 	onDeleteClick = (id) => {
